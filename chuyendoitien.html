@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table type="width:80%">
+        <tr>
+            <td> Amount </td>
+            <td> From Currency </td>
+            <td> To Currency </td>
+            
+        </tr>
+        <tr>
+            <th>
+                <input name="Amount" type="number" id="Amount">
+            </th>
+            <th>
+                <select name="From Currency" id="fr">
+                    <option value="VND"> VND</option>
+                    <option value="USD"> USD</option>
+                </select>
+            </th>
+            <th>
+                <select name="To Currency" id="to">
+                    <option value="VND"> VND</option>
+                    <option value="USD"> USD</option>
+                </select>
+            </th>
+            <th><button onclick="change()">Convert</button></th>
+        </tr>
+
+    </table>
+    <p id="result"</p>
+    <script>
+        function change() {
+            let x = document.getElementById('Amount').value;
+            let y = document.getElementById('fr').value;
+            let z = document.getElementById('to').value;
+            if (y == "USD" && z == "VND"){
+                let result = parseInt(x*24000);
+                document.getElementById("result").innerHTML = "Kết quả là" + result;
+            }
+            else if (y == "VND" && z == "USD"){
+                let result = parseInt(x/24000);
+                document.getElementById("result").innerHTML ="Kết quả là" + result;
+            }
+            else {
+                let result = x;
+                document.getElementById("result").innerHTML ="Kết quả là" + result;
+            }
+        }
+        </script>
+</body>
+
+</html>
