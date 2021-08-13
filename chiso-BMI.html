@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt('input wieght', ''));
+        let b = parseInt(prompt('input hieght', ''));
+        let BMI = a/(b*b);
+        if (BMI < 18) {
+            document.write("Underwieght");
+        } else if (BMI < 25.0) {
+            Document.write("Normal");
+        } else if (BMI < 30.0) {
+            document.write("Overwieght");
+        } else {
+            document.write("Obese");
+        }
+        
+    </script>
+</body>
+</html>
