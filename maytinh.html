@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <table>
+        <tr>
+            <th><input type="text" id="so1"</th>
+            <th> <input type="text" id="so2"</th>
+        </tr>
+        <tr>
+            <td><button onclick="phep_cong()">Addition(+)</button></td>
+            <td><button onclick="tru()">Subtraction(-)</button></td>
+            <td><button onclick="nhan()">Multiplication(x)</button></td>
+            <td><button onclick="chia()">Division(/)</button></td>
+            
+        </tr>
+    </table>
+    <p id="kq"</p>
+    <script>
+
+
+       
+         function phep_cong() {
+                let a = parseInt(document.getElementById("so1").value);
+                let b =parseInt(document.getElementById("so2").value);
+                let c = a + b ;
+            document.getElementById("kq").innerHTML=("kết quả: " +c );
+        }
+         
+        function tru() {
+            let t = parseInt(document.getElementById("so1").value);
+            let y =parseInt(document.getElementById("so2").value);
+            let d = t-y ;
+            document.getElementById("kq").innerHTML=("kết quả :"+d);
+         }
+
+         function nhan() {
+            let l = parseInt(document.getElementById("so1").value);
+            let v =parseInt(document.getElementById("so2").value);
+             let e = l*v ;
+            document.getElementById("kq").innerHTML=("kết quả:"+e);
+         }
+
+         function chia() {
+            let n = parseInt(document.getElementById("so1").value);
+            let m =parseInt(document.getElementById("so2").value);
+          let f = n/m ;
+            document.getElementById("kq").innerHTML=("kết quả :"+f );
+         }
+
+    </script>    
+
+        
+
+</body>
+</html>
