@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let suot;
+       suot="<table border='1' width='500' cellspacsing='5' cellpadding='3'>";
+       for (i=1;i<=9;i++) {
+           suot=suot+"<tr>";
+            for (j=1;j<=9;j++) {
+                suot=suot+"<td>"+i+"x"+j+"="+i*j+"</td>";
+
+            }
+            suot=suot+"</tr>";
+       }
+       suot=suot+"</table>";
+       document.write(suot);
+
+    </script>
+</body>
+</html>
