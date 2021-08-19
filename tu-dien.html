@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><H1>Từ điển VIỆT - ANH</H1></td>
+        </tr>
+        <tr>
+            <td> Tiếng Việt </td>
+            <td> Tiếng Anh </td>
+        </tr>
+        <tr>
+            <td><input type="text" id="VietNam"></td>
+            <td><input type="text" id="English" disabled></td>
+        </tr> 
+   </table>
+   <Button onclick="trans()">Dịch</Button>  
+   <script>
+    let Vstr = ['1','2','3','4','5','6'];
+    let Estr = ['one','two','three','four','five','six'];
+    function trans() {
+        let TiengViet = document.getElementById('VietNam').value;
+        console.log(TiengViet);
+        for (x=0; x<Vstr.length; x++) {
+            if (Vstr[x] == TiengViet) {
+                document.getElementById('English').value = Estr[x];
+                break;
+            } else {
+                document.getElementById('English').value = 'Không có trong từ điển'
+            }
+        } 
+    }
+</script> 
+        
+</body>
+</html>
