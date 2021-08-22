@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let Array2 = [ 'Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let star = prompt('Nhập tên ngôi sao');
+        let Sstar;
+        function Check(star) {
+            for (let i = 0; i < Array1.length; i++) {
+                if (Array1[i] == star) {
+                    Sstar = Array2[i];
+                  
+                  alert(star + ' thuộc chòm sao ' + Sstar)
+                }
+            }
+            alert ('không có ngôi sao này trong mảng')
+        }
+        Check(star);
+
+    </script>
+</body>
+</html>
