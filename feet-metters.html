@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>chuyen doi giua feet va metter</h2>
+    nhap so vao <input type="text" id="data">
+    <select id="input">
+        <option value="feet" >feet</option>
+        <option value="metter">metter</option>
+    </select> <br> <br>
+    ket qua <input type="text" id="ketqua">
+    <select id="output">
+        <option value="metter">metter</option>
+        <option value="feet">feet</option>
+    </select> <br>
+    <br>
+    <button onclick="change()">chuyen doi</button>
+    <script>
+        function change() {
+            let number = parseInt(document.getElementById('data').value);
+            let input = document.getElementById('input').value;
+            let output = document.getElementById('output').value;
+            if (input==output) {
+                document.getElementById('ketqua').value=number;
+            } else if (input=='feet' && output=='metter') {
+                document.getElementById('ketqua').value=number*0.305;
+            } else if (input=='metter' && output=='feet'){
+                document.getElementById('ketqua').value=number*3.279;
+            }
+        }
+    </script>
+</body>
+</html>
