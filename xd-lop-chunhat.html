@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500px" height="400px" style="border:1px solid #d3d3d3;"></canvas>
+    <script>    
+        function Retangle(x,y,Rewidth,Reheight) {
+            this.x = x;
+            this.y = y;
+            this.Rewidth = Rewidth;
+            this.Reheight = Reheight;
+            this.S = Rewidth*Reheight;
+            this.C = 2*(Rewidth+Reheight);
+        }
+        function createRetagle() {
+            let ctx = document.getElementById('myCanvas').getContext('2d');
+            let retagle = new Retangle(20,30,50,20);
+            ctx.strokeRect(retagle.x, retagle.y, retagle.Rewidth, retagle.Reheight);
+            document.write('diện tích hình  chữ nhật là: '+ retagle.S + ' và chu vi chữ nhật là: '+ retagle.C);
+        }
+        createRetagle();
+    </script>
+</body>
+</html>
