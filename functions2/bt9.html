@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+      let be=['a','b','c','d','e','a','f','j','a','k','b','l','m'];
+      let z=prompt('ký tự nhập vào');
+      let t=0;
+      function Check(z){
+          for (i=0;i<be.length;i++){
+              if (z==be[i]){
+                  t++;
+                  return true;
+              } 
+          } return false;
+
+      }
+      if (Check(z)){
+          alert('ký tự'+z+'lặp lại'+t+'lần trong mảng')
+      } else {
+          alert(-1)
+      }
+  </script>
+</body>
+</html>

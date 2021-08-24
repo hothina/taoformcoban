@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let x = prompt('nhập bán kính hình tròn:');
+
+        S = Dientich();
+        C = Chuvi();
+        function Dientich(x) {
+            S = Math.PI * Math.pow(x,2)
+            return S;
+        }
+        function Chuvi(x) {
+            C = 2 * x * Math.PI;
+            return C;
+        }
+        alert ('diện tích hình tròn là ' + S + "; chu vi hình tròn là "+ C)
+    </script>
+</body>
+</html>
