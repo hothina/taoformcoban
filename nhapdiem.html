@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <table>
+      <tr>
+          <th>Nhập họ tên</th>
+          <th><input type="text" id="ten"</th>
+          <th><button onclick="setten()">set tên</button</th>
+      </tr>
+      <tr>
+          <td>Nhập điểm Toán</td>
+          <td><input type="text" id="toan"</td>
+      </tr>
+      <tr>
+          <Td>Nhập điểm lý</Td>
+          <td><input type="text" id="ly"</td>
+      </tr>
+      <tr>
+          <td>Nhập điểm anh</td>
+          <td><input type="text" id="anh"</td>
+          <td><button onclick="setDTB()">set điểm TB</button></td>
+      </tr>
+      <tr>
+          <td>Nhập điểm âm nhạc</td>
+          <td><input type="text" id="nhac"</td>
+          <td><button onclick="setdiem()">set điểm</button></td>
+      </tr>
+      <tr>
+          <td>Họ tên:<span id="spten"></span></td>
+      </tr>
+      <tr>
+          <td>Điểm toán:<span id="sptoan"></span></td>
+      </tr>
+      <tr>
+          <td>Điểm Lý:<span id="sply"></span></td>
+      </tr>
+      <tr>
+          <td>Điểm anh:<span id="spanh"></span></td>
+      </tr>
+      <tr>
+          <td>Điểm Âm Nhạc:<span id="spamnhac"></span></td>
+      </tr> 
+      <tr>
+          <td>Điểm TB: <span id="sptb"></span></td>
+      </tr>
+      <tr>
+          <td>Xếp Loại: <span id="spxl"></span></td>
+      </tr>
+    </table> 
+    <script>
+        function setten() {
+            let hoten =document.getElementById("ten").value;
+            document.getElementById("spten").innerHTML= hoten;
+        }
+        function setdiem() {
+            let setdiem =document.getElementById("toan").value;
+            document.getElementById("sptoan").innerHTML=setdiem;
+
+            let dly =document.getElementById("ly").value;
+            document.getElementById("sply").innerHTML=dly;
+
+            let danh =document.getElementById("anh").value;
+            document.getElementById("spanh").innerHTML=danh;
+
+            let danhac =document.getElementById("nhac").value;
+            document.getElementById("spamnhac").innerHTML=danhac;
+         }
+         function setDTB() {
+             let toan =parseInt(document.getElementById("toan").value);
+             let ly =parseInt(document.getElementById("ly").value);
+             let anh =parseInt(document.getElementById("anh").value);
+             let anhac =parseInt(document.getElementById("nhac").value);
+             let dtb =(toan+ly+anh+anhac)/4;
+
+             document.getElementById("sptb").innerHTML=dtb;
+             if (dtb<5) {
+                 document.getElementById("spxl").innerHTML="yếu";
+             } else if (dtb < 6.5) {
+                 document.getElementById("spxl").innerHTML="trungbình";
+             } else if (dtb < 8.5) {
+                 document.getElementById("spxl").innerHTML="khá";
+             } else if (dtb < 9) {
+                 document.getElementById("spxl").innerHTMl="giỏi";
+             } else {
+                 document.getElementById("spxl").innerHTML= "xuấtsắc";
+             }
+
+         }
+    </script> 
+</body>
+</html>
