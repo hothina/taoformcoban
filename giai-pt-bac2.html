@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <h2>Phuong trinh bac 2</h2>
+        <tr>
+            <th><input type="text" style="width: 20px;" id="a"</th>
+            <th>x^2+</th>
+            <th><input type="text" style="width: 20px;" id="b"</th>
+            <th>x+</th>
+            <th><input type="text" style="width: 20px;" id="c"</th>
+            <th>=0</th>
+        </tr>
+        <tr>
+            <th><button onclick="ketqua()">giai</button></th>
+        </tr>
+    </table>
+    <p id="kq"></p>
+    <script>
+        function ketqua() {
+        let a=parseInt(document.getElementById("a").value);
+        let b=parseInt(document.getElementById("b").value);
+        let c=parseInt(document.getElementById("c").value);
+        let d=b*b-4*a*c;
+        var x;
+        var x1;
+        var x2;
+        if (d==0) {
+            x=-b/(2*a);
+            document.getElementById("kq").innerHTML=("pt co nghiem kep:" +x);
+        } else if (d<0) {
+            document.getElementById("kq").innerHTML=("pt vo ngiem");
+        } else {
+            x1=(-b+Math.sqrt(d))/(2*a);
+            x2=(-b-Math.sqrt(d))/(2*a);
+            document.getElementById("kq").innerHTML=("pt co 2 nghiem: x1 ="+x1+": x2 = " +x2)
+        }
+
+        }
+
+    </script>
+</body>
+</html> 
