@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <h1>Product Managetment</h1>
+  <div>
+    <label for="txtproduct" class="form-label">Add new Product</label>
+<input type="text" id="input">
+<button id="add">add</button>
+<div id="passwordHelpBlock" class="form-text">
+
+  
+</div>
+  </div>
+  <div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Product name</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody id="card">
+      </tbody>
+    </table>
+  </div>
+   <script>
+     let arrproduct=["iphone","iphone X","iphone Xs","iphone 6"];
+     function displayItem(){
+     let str =``;
+     for(let i=0;i<arrproduct.length;i++) {
+       str+=`
+      <tr>
+          <th scope="row">${i+1}</th>
+          <td>${arrproduct[i]}</td>
+           <td><button type="button" onclick="editItem(${i})" class="btn btn-outline-danger">edit</button></td>
+           <td><button type="button" onclick="removeProduct(${i})" class="btn btn-outline-success" >delete</button></td> 
+        </tr>`;
+     }
+    
+        document.getElementById("card").innerHTML=str;
+      }
+        document.getElementById("add").addEventListener("click",function(){
+          let name=document.getElementById("input").value;
+          arrproduct.push(name);
+          let count = arrproduct.length;
+          if(name !=""){
+          str =`
+          <tr>
+          <th scope="row">${count}</th>
+          <td>${name}</td>
+          <td><button type="button" onclick="editItem(${count})" class="btn btn-outline-danger">edit</button></td>
+          <td><button type="button" onclick="removeProduct(${count})" class="btn btn-outline-success" >delete</button></td>
+        </tr>`;
+        document.getElementById("card").innerHTML += str;
+        document.getElementById("input").value="";
+      }
+        });
+  
+      displayItem();
+        function removeProduct(i) {
+          arrproduct.splice(i,1);   
+          displayItem();
+        }
+
+        function editItem(tdid) {
+        arrproduct[tdid] =prompt("input");
+        displayItem();
+      }
+
+      
+
+   </script>
+ </body>
+</html>
