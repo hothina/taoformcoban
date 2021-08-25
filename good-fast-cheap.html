@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> what do you choose?</h1> 
+    <input type="checkbox" id="g" onclick="chooseG()"> Good <br>
+    <input type="checkbox" id="f" onclick="chooseF()"> Fast <br>
+    <input type="checkbox" id="c" onclick="chooseC()"> Cheap <br>
+    <script>
+        function chooseG() {
+            let g =document.getElementById("g").checked;
+            let f =document.getElementById("f").checked;
+            let c =document.getElementById("c").checked;
+            if (g && f){
+                document.getElementById("c").checked= false;
+            }
+        }
+        function chooseF() {
+            let g =document.getElementById("g").checked;
+            let f =document.getElementById("f").checked;
+            let c =document.getElementById("c").checked;
+            if (c && f){
+                document.getElementById("g").checked= false;
+            }
+
+        }       
+         function chooseC() {
+            let g =document.getElementById("g").checked;
+            let f =document.getElementById("f").checked;
+            let c =document.getElementById("c").checked;
+            if (c && g){
+                document.getElementById("f").checked= false;
+            }
+        }
+    </script>
+</body>
+
+
+</html>
