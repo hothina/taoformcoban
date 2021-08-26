@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   
+        <form name="Calculator">
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" name="Screen" disabled></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="one" value="1" onclick="Calculator.Screen.value += 1"></td>
+                <td><input type="button" name="two" value="2" onclick="Calculator.Screen.value += 2"></td>
+                <td><input type="button" name="three" value="3" onclick="Calculator.Screen.value += 3"></td>
+                <td><input type="button" class="Operator" name="Plus" value="+" onclick="Calculator.Screen.value += '+'"></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="four" value="4" onclick="Calculator.Screen.value += 4"></td>
+                <td><input type="button" name="five" value="5" onclick="Calculator.Screen.value += 5"></td>
+                <td><input type="button" name="six" value="6" onclick="Calculator.Screen.value += 6"></td>
+                <td><input type="button" class="Operator" name="Minus" value="-" onclick="Calculator.Screen.value += '-'"></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="seven" value="7" onclick="Calculator.Screen.value += 7"></td>
+                <td><input type="button" name="eight" value="8" onclick="Calculator.Screen.value += 8"></td>
+                <td><input type="button" name="nine" value="9" onclick="Calculator.Screen.value += 9"></td>
+                <td><input type="button" class="Operator" name="Time" value="*" onclick="Calculator.Screen.value += '*'"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="Operator" name="clear" id="clear" value="C" onclick="Calculator.Screen.value = ''"></td>
+                <td><input type="button" class="Operator" name="zero" value="0" onclick="Calculator.Screen.value += '0'"></td>
+                <td><input type="button" class="Operator" name="doit" value="=" onclick="Calculator.Screen.value = eval(Calculator.Screen.value)"></td>
+                <td><input type="button" class="Operator" name="div" value="/" onclick="Calculator.Screen.value += '/'"></td>
+            </tr>
+        </table>
+        </form>
+</body>
+</html>
