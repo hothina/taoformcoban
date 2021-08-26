@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+      
+        function fibo(n){
+        var f0=0;
+        var f1=1;
+        var fn=1;
+        if(n==0)
+        {
+            document.write(n);
+        }else if(n==1) 
+        {
+            document.write("0"+"&nbsp");
+            document.write(n+"&nbsp");
+        }
+        else{
+            document.write(0+"&nbsp");
+            document.write(1+"&nbsp");
+            document.write(1+"&nbsp");
+        for (i =2; i < n; i++) {
+                f0 = f1;
+                f1 = fn;
+                fn = f0 + f1;
+                document.write(fn+"&nbsp");       
+            } }}
+        fibo(19); 
+    
+    
+        
+        // document.write("<br>");
+        // function fibo2(n)
+        // {
+        //     if(n==1||n==2)
+        //     return 1;
+        //     else return fibo2(n-1)+fibo2(n-2);
+        // }
+        // for(i=1;i<20;i++)
+        // {
+        //     document.write(fibo2(i)+"&nbsp");
+        // }
+        
+    
+    
+        </script>
+</body>
+</html>
