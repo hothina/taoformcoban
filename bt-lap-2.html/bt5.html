@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tính lãi ngân hàng</h2>
+    Nhập số tiền cần vay: <input type="Amount" id="Money"> <br> <br>
+    <select name="Time" id="Time">
+        <option value="Month1">3-6 tháng (7.2%/năm)</option>
+        <option value="Month2">6-12 tháng (7.5%/năm)</option>
+        <option value="Month3">trên 1 năm (8%/năm)</option>
+    </select>
+    <button onclick="Count()">Tính tiền lãi</button> <br> <br>
+    Tiền lãi phải trả: <input type="Amount" id="Interest" disabled> <br> <br>
+    Tính lãi gộp: <br> <br>
+    Nhập số biên độ trả tiền muộn <input type="Amount" id="times"> <br> <br>
+    Tiền lãi gộp: <input type="Amount" id="Interest2" disabled>
+    <button onclick="Count2()"> Tính lãi gộp </button>
+    <script>
+        function Count() {
+            let money = parseInt(document.getElementById('Money').value);
+            let time = document.getElementById('Time').value;
+            if (time == 'Month1') {
+                document.getElementById('Interest').value = money*0.072
+            } else if (time == 'Month2') {
+                document.getElementById('Interest').value = money*0.075
+            }  else if (time == 'Month3') {
+                document.getElementById('Interest').value = money*0.08
+            }
+        }
+        function Count2() {
+            let money = parseInt(document.getElementById('Money').value);
+            let time = document.getElementById('Time').value;
+            let times = document.getElementById('times').value;
+            let Interest =0;
+            if (time == 'Month1') {
+                for (i=0; i<=times; i++) {
+                    Interest = money*0.072;
+                    money += Interest;
+                    console.log(money);
+                }
+                document.getElementById('Interest2').value = Interest;
+            } else if (time == 'Month2') {
+                for (i=0; i<=times; i++) {
+                    Interest = money*0.075;
+                    money += Interest;
+                }
+                document.getElementById('Interest2').value = Interest;
+            }  else if (time == 'Month3') {
+                for (i=0; i<=times; i++) {
+                    Interest = money*0.08;
+                    money += Interest;
+                }
+                document.getElementById('Interest2').value = Interest;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="Result"></p>
+    <script>
+        for(i=0; i<20; i++){
+            document.getElementById('Result').innerHTML += '*'
+        }
+        document.getElementById('Result').innerHTML += '</br>'
+        for (j=0; j<4; j++) {
+            document.getElementById('Result').innerHTML += '*';
+            for(k=0; k<18; k++) {
+                document.getElementById('Result').innerHTML += '&nbsp;&nbsp';
+            }
+            document.getElementById('Result').innerHTML += '* </br>';
+        }
+        for(i=0; i<20; i++){
+            document.getElementById('Result').innerHTML += '*'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="Tg-1"></p> <br>
+    <p id="Tg-2"></p> <br>
+    <p id="Tg-3"></p> <br>
+    <p id="Tg-4"></p> <br>
+    <script>
+        for(i=0; i < 10; i++) {
+            for (j=0; j<i ; j++) {
+                document.getElementById('Tg-1').innerHTML += '*';
+            }
+            document.getElementById('Tg-1').innerHTML += '</br>'
+        }
+        for(i=1; i < 10; i++) {
+            for (j=10-i; j > 0 ; j--) {
+                document.getElementById('Tg-2').innerHTML += '*';
+            }
+            document.getElementById('Tg-2').innerHTML += '</br>'
+        }
+        for(i=0; i < 10; i++) {
+            for (j=10-i; j>0 ; j--) {
+                document.getElementById('Tg-3').innerHTML += '&nbsp;&nbsp';
+            }
+            for (k=0; k<=i; k++) {
+                document.getElementById('Tg-3').innerHTML += '*'
+            }
+            document.getElementById('Tg-3').innerHTML += '</br>'
+        }
+        for(i=0; i < 10; i++) {
+            for (k=0; k<=i; k++) {
+                document.getElementById('Tg-4').innerHTML += '&nbsp;&nbsp'
+            }
+            for (j=10-i; j>0 ; j--) {
+                document.getElementById('Tg-4').innerHTML += '*';
+            }
+            document.getElementById('Tg-4').innerHTML += '</br>'
+        }
+    </script>
+</body>
+</html>
