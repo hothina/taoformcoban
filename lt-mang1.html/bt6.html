@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ let number = prompt ('nhập một số nguyên: ')
+        let array = [2,5,-6,8,9,12,15,18,98,21];
+        function Check(number) {
+            for (i=0; i<array.length; i++) {
+                if (array[i] == number) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        if (Check(number)) {
+            alert(number +' is in the Array');
+        } else alert(number +' is not in the Array');
+    </script>
+</body>
+</html>

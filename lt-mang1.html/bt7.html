@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number = prompt ('nhập một số nguyên: ')
+        let array = [4,7,2,12,-1,26,-5,-12,20,1];
+        function Check(number) {
+            for (i=0; i<array.length; i++) {
+                if (array[i] == number) {
+                    array.splice(i,1);
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        if (Check(number)) {
+            console.log(array);
+            alert(number +' is in the Array and not anymore');
+        } else alert(number +' is not in the Array');
+    </script>
+</body>
+</html>
